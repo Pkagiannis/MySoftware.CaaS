@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  caas.api:
+    image: ${DOCKER_REGISTRY-}caasapi
+    build:
+      context: .
+      dockerfile: src/CaaS.API/Dockerfile
+    container_name: caasapi
+    networks:
+      - caas-network
+
+  caas.db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "Pwd12345^"
+      ACCEPT_EULA: "Y"
+    container_name: caasdb
+    volumes:
+      - caas-db-data:/var/opt/mssql
+    networks:
+      - caas-network
+
+volumes:
+  caas-db-data:
+
+networks:
+  caas-network:
+    driver: bridge

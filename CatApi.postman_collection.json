@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "1eab111c-85e2-400b-84e7-9f7b53d7397a",
+		"name": "CatApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15522761"
+	},
+	"item": [
+		{
+			"name": "CaasApi - Cats",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "live_VSv7m6EAzCimaxrZhkZXiFC6g2Ex1JOSfL7ebtruO1UqhjOOmAluwm0P8mmnnSFN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.thecatapi.com/v1/images/search?limit=25",
+					"protocol": "https",
+					"host": [
+						"api",
+						"thecatapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"images",
+						"search"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CatByCatId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8081/api/cats/Z6mrcccZv",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cats",
+						"Z6mrcccZv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cats",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8081/api/cats/fetch",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cats",
+						"fetch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PagedFilteredCats",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8081/api/cats?page=1&pageSize=10&tag=Intelligent",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cats"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "tag",
+							"value": "Intelligent"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

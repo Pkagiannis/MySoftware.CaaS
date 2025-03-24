@@ -1,0 +1,16 @@
+﻿global using Caas.Application.Common;
+global using Caas.Application.Common.Behaviors;
+global using Caas.Application.Common.CQRS;
+global using Caas.Application.Common.Pagination;
+global using CaaS.Domain.Abstractions;
+global using CaaS.Domain.Entities;
+global using FluentValidation;
+global using MediatR;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using System.ComponentModel.DataAnnotations;
+global using System.Diagnostics;
+global using System.Net.Http.Json;
+global using System.Reflection;
+global using System.Text.Json.Serialization;
